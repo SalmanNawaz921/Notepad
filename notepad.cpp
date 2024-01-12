@@ -402,7 +402,8 @@ public:
     {
         if (find(FilesRecorder.begin(), FilesRecorder.end(), filename) != FilesRecorder.end())
         {
-            cout << setw(92) << filename << " already exists: " << endl;
+            cout << "\n";
+            cout << setw(82) << filename << " already exists: " << endl;
             return;
         }
         FilesRecorder.push_back(filename);
@@ -436,7 +437,8 @@ public:
     {
         if (find(FilesRecorder.begin(), FilesRecorder.end(), filename) == FilesRecorder.end())
         {
-            cout << setw(92) << filename << " not found" << endl;
+            cout << "\n";
+            cout << setw(82) << filename << " not found" << endl;
             return;
         }
         ifstream readFile(filename.c_str());
@@ -686,7 +688,8 @@ int main()
             subMenu("Show All Files");
             fileEditor.showAllFiles();
         }
-        cout << "Press any key to continue...";
+        cout << endl;
+        cout << setw(100) << "Press any key to continue...";
         getch();
         clearScreen();
     }
